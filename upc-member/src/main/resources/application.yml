@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    username: root
+    password: 1234
+    url: jdbc:mysql://127.0.0.1:3306/upc_ums?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.jdbc.Driver
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+  application:
+    name: upc-member
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+server:
+  port: 8000
